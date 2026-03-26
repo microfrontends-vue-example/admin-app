@@ -1,20 +1,50 @@
 # admin-app
 
-This is a remote microfrontend that provides an admin panel component to the `main-app` via Module Federation.
+Admin dashboard microfrontend for managing system data and operations within the microfrontend system.
 
-## Features
+---
 
-- Displays a greeting and user information
-- Checks authentication and role from shared Pinia store
-- Has its own internal routing (e.g. `/users`, `/settings`)
-- Integrates smoothly as a secured remote module
+## Role
 
-## Technologies
+- Provides administrative interface for system management
+- Handles admin-specific workflows and operations
+- Manages data across different domains
+- Isolated from user-facing microfrontends
+
+---
+
+## Integration
+
+- Exposed as a remote module via Module Federation
+- Loaded dynamically by the host application (`main-app`)
+- Designed to be independently deployable
+- Loaded via remote entry URL at runtime
+- Designed to be consumed by multiple host applications
+- Versioned and integrated via Module Federation contracts
+
+---
+
+## Tech Stack
 
 - Vue 3
+- TypeScript
 - Vite
-- Pinia
-- Vue Router
-- Module Federation (originjs plugin)
+- Module Federation (vite-plugin-federation)
 
-## Project structure
+---
+
+## Development
+
+```bash
+yarn
+yarn dev
+```
+
+Application runs at http://localhost:3003
+
+---
+
+## Part of system
+
+This application is part of the microfrontend system:  
+[Microfrontends Vue Lab](https://github.com/Artem-Makarchenko-Dev/microfrontends-vue-lab)
